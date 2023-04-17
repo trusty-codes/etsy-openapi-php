@@ -1,0 +1,47 @@
+# ShopReceipt
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**receipt_id** | **int** | The numeric ID for the [receipt](/documentation/reference#tag/Shop-Receipt) associated to this transaction. | [optional] 
+**receipt_type** | **int** | The numeric value for the Etsy channel that serviced the purchase: 0 for Etsy.com, 1 for a Pattern shop. | [optional] 
+**seller_user_id** | **int** | The numeric ID for the [user](/documentation/reference#tag/User) (seller) fulfilling the purchase. | [optional] 
+**seller_email** | **string** | The email address string for the seller of the listing. | [optional] 
+**buyer_user_id** | **int** | The numeric ID for the [user](/documentation/reference#tag/User) making the purchase. | [optional] 
+**buyer_email** | **string** | The email address string for the buyer of the listing. | [optional] 
+**name** | **string** | The name string for the recipient in the shipping address. | [optional] 
+**first_line** | **string** | The first address line string for the recipient in the shipping address. | [optional] 
+**second_line** | **string** | The optional second address line string for the recipient in the shipping address. | [optional] 
+**city** | **string** | The city string for the recipient in the shipping address. | [optional] 
+**state** | **string** | The state string for the recipient in the shipping address. | [optional] 
+**zip** | **string** | The zip code string (not necessarily a number) for the recipient in the shipping address. | [optional] 
+**status** | **string** | The current order status string. One of: &#x60;paid&#x60;, &#x60;completed&#x60;, &#x60;open&#x60;, &#x60;payment processing&#x60; or &#x60;canceled&#x60;. | [optional] 
+**formatted_address** | **string** | The formatted shipping address string for the recipient in the shipping address. | [optional] 
+**country_iso** | **string** | The ISO-3166 alpha-2 country code string for the recipient in the shipping address. | [optional] 
+**payment_method** | **string** | The payment method string identifying purchaser&#x27;s payment method, which must be one of: \\&#x27;cc\\&#x27; (credit card), \\&#x27;paypal\\&#x27;, \\&#x27;check\\&#x27;, \\&#x27;mo\\&#x27; (money order), \\&#x27;bt\\&#x27; (bank transfer), \\&#x27;other\\&#x27;, \\&#x27;ideal\\&#x27;, \\&#x27;sofort\\&#x27;, \\&#x27;apple_pay\\&#x27;, \\&#x27;google\\&#x27;, \\&#x27;android_pay\\&#x27;, \\&#x27;google_pay\\&#x27;, \\&#x27;klarna\\&#x27;, \\&#x27;k_pay_in_4\\&#x27; (klarna), \\&#x27;k_pay_in_3\\&#x27; (klarna), or \\&#x27;k_financing\\&#x27; (klarna). | [optional] 
+**payment_email** | **string** | The email address string for the email address to which to send payment confirmation | [optional] 
+**message_from_seller** | **string** | An optional message string from the seller. | [optional] 
+**message_from_buyer** | **string** | An optional message string from the buyer. | [optional] 
+**message_from_payment** | **string** | The machine-generated acknowledgement string from the payment system. | [optional] 
+**is_paid** | **bool** | When true, buyer paid for this purchase. | [optional] 
+**is_shipped** | **bool** | When true, seller shipped the products. | [optional] 
+**create_timestamp** | **int** | The receipt\\&#x27;s creation time, in epoch seconds. | [optional] 
+**created_timestamp** | **int** | The receipt\\&#x27;s creation time, in epoch seconds. | [optional] 
+**update_timestamp** | **int** | The time of the last update to the receipt, in epoch seconds. | [optional] 
+**updated_timestamp** | **int** | The time of the last update to the receipt, in epoch seconds. | [optional] 
+**is_gift** | **bool** | When true, the buyer indicated this purchase is a gift. | [optional] 
+**gift_message** | **string** | A gift message string the buyer requests delivered with the product. | [optional] 
+**grandtotal** | [**AllOfShopReceiptGrandtotal**](AllOfShopReceiptGrandtotal.md) | A number equal to the total_price minus the coupon discount plus tax and shipping costs. | [optional] 
+**subtotal** | [**AllOfShopReceiptSubtotal**](AllOfShopReceiptSubtotal.md) | A number equal to the total_price minus coupon discounts. Does not included tax or shipping costs. | [optional] 
+**total_price** | [**AllOfShopReceiptTotalPrice**](AllOfShopReceiptTotalPrice.md) | A number equal to the sum of the individual listings\\&#x27; (price * quantity). Does not included tax or shipping costs. | [optional] 
+**total_shipping_cost** | [**AllOfShopReceiptTotalShippingCost**](AllOfShopReceiptTotalShippingCost.md) | A number equal to the total shipping cost of the receipt. | [optional] 
+**total_tax_cost** | [**AllOfShopReceiptTotalTaxCost**](AllOfShopReceiptTotalTaxCost.md) | The total sales tax of the receipt. | [optional] 
+**total_vat_cost** | [**AllOfShopReceiptTotalVatCost**](AllOfShopReceiptTotalVatCost.md) | A number equal to the total value-added tax (VAT) of the receipt. | [optional] 
+**discount_amt** | [**AllOfShopReceiptDiscountAmt**](AllOfShopReceiptDiscountAmt.md) | The numeric total discounted price for the receipt when using a discount (percent or fixed) coupon. Free shipping coupons are not included in this discount amount. | [optional] 
+**gift_wrap_price** | [**AllOfShopReceiptGiftWrapPrice**](AllOfShopReceiptGiftWrapPrice.md) | The numeric price of gift wrap for this receipt. | [optional] 
+**shipments** | [**\Swagger\Client\Model\AllOfShopReceiptShipmentsItems[]**](.md) | A list of shipment statements for this receipt. | [optional] 
+**transactions** | [**\Swagger\Client\Model\AllOfShopReceiptTransactionsItems[]**](.md) | Array of transactions for the receipt. | [optional] 
+**refunds** | [**\Swagger\Client\Model\AllOfShopReceiptRefundsItems[]**](.md) | Refunds for a given receipt. | [optional] 
+
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
+
